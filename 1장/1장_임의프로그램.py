@@ -1,19 +1,35 @@
-class Gimbab():
-    Danmuji = 0
-    Ham = 0
-    Danggun = 0
-    Shigumchi = 0
-    def __init__(self):
-        self.Danmuji, self.Ham, self.Danggun, self.Shigumchi = input("각 재료의 개수를 입력해주세요(단무지, 햄, 당근, 시금치) : ").split()
+class Katsu_Element():
+    Bread = 1
+    Egg = 1
+    def Print_Element(self):
+        print("기본재료 | 빵 : %d | 계란 : %d" % (self.Bread, self.Egg))
 
-    def order(self):
-        order_file = open("order.txt", "w")
-        order_file.write("주문기록 >> 단무지 : %d | 햄 : %d | 당근 : %d | 시금치 : %d")
-        order_file.close()
-
-class Cheese(Gimbab):
-    Chs = 0
+class Don_Katsu(Katsu_Element):
+    Meat = "돼지고기"
     def __init__(self):
-        Gimbab.__init__(self)
-        self.Chs = input("치즈는 몇장 넣을까요 ? : ")
+        self.Print_Element()
+        print("돈까스 생성! 고기 : %s" % self.Meat)
     
+class Hire_Katsu(Don_Katsu):
+    Part = "안심"
+    def __init__(self):
+        self.Print_Element()
+        print("히레카츠 생성! 고기 : %s | 부위 : %s" % (self.Meat, self.Part))
+
+class Rosu_Katsu(Don_Katsu):
+    Part = "등심"
+    def __init__(self):
+        self.Print_Element()
+        print("로스카츠 생성! 고기 : %s | 부위 : %s" % (self.Meat, self.Part))
+
+class Chicken_Katsu(Katsu_Element):
+    Meat = "닭고기"
+    def __init__(self):
+        self.Egg = 2
+        self.Print_Element()
+        print("치킨까스 생성! 고기 : %s" % self.Meat)
+
+eat1 = Don_Katsu()
+eat2 = Hire_Katsu()
+eat3 = Rosu_Katsu()
+eat4 = Chicken_Katsu()
