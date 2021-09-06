@@ -29,7 +29,7 @@ class Chicken_Katsu(Katsu_Element):
         self.Print_Element()
         print("치킨까스 생성! 고기 : %s" % self.Meat)
 
-eat1 = Don_Katsu()
-eat2 = Hire_Katsu()
-eat3 = Rosu_Katsu()
-eat4 = Chicken_Katsu()
+menu1 = Don_Katsu()
+menu2 = Hire_Katsu()
+menu3 = Rosu_Katsu()
+menu4 = Chicken_Katsu()
