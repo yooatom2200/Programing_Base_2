@@ -31,7 +31,7 @@ myDog.bark()
 
 yourDog = Dog()
 yourDog.name = "Happy"
-yourDog.weight = 30
+yourDog.weight = 40
 yourDog.age = 5
 yourDog.bark()
 
