@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>오늘의 운세</title>
+        <style type="text/css"> a { text-decoration:none } </style> 
+    </head>
+    <body>
+        <center>
+            <p>날짜값 : {{ymd_split[0]}}년 {{ymd_split[1]}}월 {{ymd_split[2]}}일</p>
+            <hr/>
+        </center>
+        <h3>당신의 십이간지(띠)와 오늘의 운세
+        <A href = "https://unse.daily.co.kr/?p=zodiac" target = "blank" >&emsp;오늘의 운세 출처</A></h3>
+        <strong>띠 : {{zodiac}}</strong>
+        <h3>오늘의 운세</h3>
+        <h5>띠 공통 운세</h5>
+        <p>{{total_text}}</p>
+        <h5>{{ymd_split[0]}}년생 운세</h5>
+        {% if year_text %}
+        <p>{{year_text}}</p>
+        {% else %}
+        <p>나이가 너무 어리거나 많은것 같습니다. 데이터가 존재하지 않습니다.</p>
+        {% endif %}
+    </body>
+</html>
