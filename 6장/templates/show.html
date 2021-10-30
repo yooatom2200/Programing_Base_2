@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>오늘의 운세</title>
+        <style type="text/css"> a { text-decoration:none } </style> 
+    </head>
+    <body>
+        <center>
+            <p>날짜값 : {{ymd_split[0]}}년 {{ymd_split[1]}}월 {{ymd_split[2]}}일</p>
+            <hr/>
+            <h1>🐭🐮🐯🐰🐲🐍🦄🐏🐵🐔🐶🐷</h1>
+            <h3>{{name}}님의 십이간지(띠)와 오늘의 운세
+            <A href = "https://unse.daily.co.kr/?p=zodiac" target = "blank" >&emsp;오늘의 운세 출처</A></h3>
+            <strong>띠 : {{zodiac}}</strong>
+            <h2>오늘의 운세</h2>
+            <h4>띠 공통 운세</h4>
+            <p>{{total_text}}</p>
+            <h4>{{ymd_split[0]}}년생 운세</h4>
+            {% if year_text %}
+            <p>{{year_text}}</p>
+            {% else %}
+            <p>나이가 너무 어리거나 많은것 같습니다. 데이터가 존재하지 않습니다.</p>
+            {% endif %}
+            <hr/>
+            <h3> {{name}}님의 탄생화와 탄생석 </h3>
+            <h2> 💐 탄 생 화 💐 </h2>
+            <p> 당신의 탄생화는 <span style="cursor:hand;color:royalblue" >{{flower[1]}}</span> (이)에요. 의미는 <span style="cursor:hand;color:#298A08" >{{flower[2]}}</span> (이)랍니다! </p>
+            <h2> 🪨 탄 생 석 🪨 </h2>
+            <p> 당신의 탄생석은 <span style="cursor:hand;color:royalblue" >{{stone[1]}}</span> (이)에요. 의미는 <span style="cursor:hand;color:#298A08" >{{stone[2]}}</span>(이)랍니다! </p>
+        </center>
+    </body>
+</html>
